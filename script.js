@@ -22,18 +22,24 @@ const events= [{
     name: eventName.value,
     date: eventDate.value
 }]
+
+
 button.onclick= () => {
  let eventList= document.createElement('li')
  let removeBtn= document.createElement('button')
+ let countDown= document.createElement('input')
+ countDown.type= "time"
  removeBtn.innerHTML= "X"
  removeBtn.onclick= () => {
      main.removeChild(eventList)
  }
  eventList.innerText= eventName.value + ' ' + eventDate.value;
  eventList.appendChild(removeBtn)
+ eventList.appendChild(countDown)
  main.appendChild(eventList) 
  console.log(eventList)
+
  localStorage.setItem("nom", eventName.value)
  localStorage.setItem("date", eventDate.value)
- 
 }
+
