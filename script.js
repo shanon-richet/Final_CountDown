@@ -12,7 +12,8 @@ if(localStorage.getItem("nom") !== null){
     removeBtn.innerHTML= 'X'
     removeBtn.onclick= () => {
         main.removeChild(eventList)
-        
+        localStorage.removeItem('nom')  
+        localStorage.removeItem('date') 
     }
     eventList.appendChild(removeBtn)
     main.appendChild(eventList)
