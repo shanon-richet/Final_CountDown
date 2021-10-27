@@ -3,17 +3,20 @@ const section= document.querySelector('section')
 const button= document.querySelector('.submit')
 const eventName= document.querySelector('.eventName')
 const eventDate= document.querySelector('.eventDate')
+var eventList= document.querySelector('li')
 
-const stored= JSON.parse(localStorage.getItem('listEvent'))
-
-if(stored !== null){
-eventList= localStorage.getItem('listEvent')
-eventList= stored;
+if(localStorage.getItem("nom") !== null){
+    let eventList= document.createElement('li')
+    eventList.innerHTML= `${localStorage.getItem("nom") + localStorage.getItem("date")}`
+    let removeBtn= document.createElement('button')
+    removeBtn.innerHTML= 'X'
+    removeBtn.onclick= () => {
+        main.removeChild(eventList)
+        
+    }
+    eventList.appendChild(removeBtn)
+    main.appendChild(eventList)
 }
-function saveToStorage(){
-    localStorage.setItem('listEvent', JSON.stringify(eventList))
-}
-button.addEventListener('click', saveToStorage)
 const events= [{
     name: eventName.value,
     date: eventDate.value
@@ -28,4 +31,8 @@ button.onclick= () => {
  eventList.innerText= eventName.value + ' ' + eventDate.value;
  eventList.appendChild(removeBtn)
  main.appendChild(eventList) 
+ console.log(eventList)
+ localStorage.setItem("nom", eventName.value)
+ localStorage.setItem("date", eventDate.value)
+ 
 }
