@@ -4,12 +4,6 @@ const button= document.querySelector('.submit')
 const eventName= document.querySelector('.eventName')
 const eventDate= document.querySelector('.eventDate')
 
-if(localStorage.getItem("nom") !== null){
-    let eventList= document.createElement('li')
-    eventList.innerHTML= `${localStorage.getItem("nom")}`
-main.appendChild(eventList)
-}
-
 const events= []
 let i= 0;
 i< events.length;
@@ -25,7 +19,21 @@ button.onclick= () => {
     main.appendChild(list)
     localStorage.setItem('nom', JSON.stringify(events))
 }
+let stored= JSON.parse(localStorage.getItem('nom'))
 
-
+if(stored !== null){
+    events.push(stored)
+    for (const x of stored){
+        console.log(x)
+        let li= document.createElement('li')
+        li.innerHTML= stored.name + stored.date;
+        main.appendChild(li)
+    }
+}
+else{
+    stored= []
+    localStorage.setItem("nom", JSON.stringify(events))
+    console.log(stored)
+}
 
 
