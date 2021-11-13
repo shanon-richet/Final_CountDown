@@ -4,36 +4,25 @@ const button= document.querySelector('.submit')
 const eventName= document.querySelector('.eventName')
 const eventDate= document.querySelector('.eventDate')
 
-const events= []
-let i= 0;
-i< events.length;
-button.onclick= () => {
-    let eventsArray= {
-        name: eventName.value,
-        date: eventDate.value
-    }
-    events.push(eventsArray)
-    console.log(eventsArray)
-    var list= document.createElement('li')
-    list.innerHTML= eventsArray.date + '-' + eventsArray.name;
-    main.appendChild(list)
-    localStorage.setItem('nom', JSON.stringify(events))
-}
-let stored= JSON.parse(localStorage.getItem('nom'))
+let events = JSON.parse(localStorage.getItem('events')) || []
 
-if(stored !== null){
-    events.push(stored)
-    for (const x of stored){
-        console.log(x)
-        let li= document.createElement('li')
-        li.innerHTML= stored.name + stored.date;
-        main.appendChild(li)
-    }
+button.onclick= () => {
+    let inputValue= eventName.value + eventDate.value
+    events.push(inputValue)
+    console.log(inputValue)
+    let list= document.createElement('li')
+    list.innerHTML= inputValue
+    section.appendChild(list)
+    localStorage.setItem('events', JSON.stringify(events))
 }
-else{
-    stored= []
-    localStorage.setItem("nom", JSON.stringify(events))
-    console.log(stored)
+
+for (let i= 0; i < events.length; i++) {
+    let li= document.createElement('li')
+    li.innerHTML= events[i]
+    section.appendChild(li)
 }
+
+
+
 
 
