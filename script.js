@@ -4,7 +4,7 @@ const button= document.querySelector('.submit')
 const eventName= document.querySelector('.eventName')
 const eventDate= document.querySelector('.eventDate')
 
-let events = JSON.parse(localStorage.getItem('events')) || []
+let events = JSON.parse(localStorage.getItem('events'))
 
 button.onclick= () => {
     let inputValue= eventName.value + eventDate.value
