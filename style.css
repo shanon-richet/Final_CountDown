@@ -1,0 +1,36 @@
+body {
+    color: whitesmoke;
+    background-image: linear-gradient(rgb(7, 145, 7), rgb(6, 131, 110), rgb(5, 100, 12));
+    border: 1px ridge black;
+}
+button, input, .eventList {
+    background-color: rgb(5, 78, 56);
+    opacity: 0.8;
+    color: whitesmoke;
+    border: 1px ridge black;
+}
+header {
+    text-align: center;
+    background-color: rgb(7, 145, 7);
+    height: 100px;
+}
+header input {
+    margin-top: 20px;
+}
+main {
+    margin: 10px;
+}
+.eventList {
+    height: 100px;
+    margin: 10px;
+}
+li {
+    list-style: none;
+    display: flex;
+    margin: 30px;
+}
+li p {
+    position: absolute;
+    right: 100px;
+    margin-top: 0;
+}
