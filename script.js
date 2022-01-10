@@ -16,29 +16,22 @@ let arr= {}
     arr['nom']= eventName.value
     arr['date']= eventDate.value
     arr['time']= eventTime.value
-
     inputValue= arr.nom + ' / ' + new Date(arr.date).toLocaleDateString('fr-FR', options) + ' / ' + arr.time
-
     events.push(arr)
-
     var x= setInterval(() => {
         var now = new Date().getTime();
         var dateEvent= new Date(eventDate.value)
         var distance = dateEvent - now;
-    
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-        p.innerHTML= days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-          
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);   
+        p.innerHTML= days + "d " + hours + "h " + minutes + "m " + seconds + "s ";         
         if (distance < 0) {
           clearInterval(x);
           document.getElementById("demo").innerHTML = "EXPIRED";
         }
       }, 1000)
-
     var sectionEvents= document.createElement('section')
     section.appendChild(sectionEvents)
     let list= document.createElement('li')
@@ -46,7 +39,6 @@ let arr= {}
     let p= document.createElement('p')
     sectionEvents.appendChild(list)
     list.appendChild(p)
-
     localStorage.setItem('events', JSON.stringify(events))
 }
 
@@ -59,17 +51,14 @@ for (const event of events) {
     let storedCountDown= document.createElement('p')
     sectionEvents.appendChild(li)
     li.appendChild(storedCountDown)
-
     var x= setInterval(() => {
         var now = new Date().getTime();
         var dateEvent= new Date(event.date)
-        var distance = dateEvent - now;
-    
+        var distance = dateEvent - now;  
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
         storedCountDown.innerHTML= `${days}d ${hours}h ${minutes}m ${seconds}s `;
           
         if (distance < 0) {
@@ -78,4 +67,6 @@ for (const event of events) {
         }
       }, 1000)
 }
+
+
 
