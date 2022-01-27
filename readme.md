@@ -14,4 +14,3 @@ Make program for add events and show the time left before that event
 ## Coloors
 
 - https://coolors.co/702632-465c69-e7e247-a4bab7
-- 
