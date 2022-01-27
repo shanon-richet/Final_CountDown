@@ -1,36 +1,41 @@
 body {
-    color: whitesmoke;
-    background-color:rgb(5, 100, 12);
-    border: 1px ridge black;
-}
-button, input, .eventList {
-    background-color: rgb(5, 78, 56);
-    opacity: 0.8;
-    color: whitesmoke;
-    border: 1px ridge black;
-}
-header {
-    text-align: center;
-    background-color: rgb(7, 145, 7);
-    height: 100px;
-}
-header input {
-    margin-top: 20px;
+    color: #E7E247;
+    background-color:#248232;
+    background-image: url('https://i.pinimg.com/originals/86/74/c0/8674c01b6a1dc3f9cdd787de586fcc88.jpg');
 }
 main {
-    margin: 10px;
+    margin: 50px;
+    background-color: #465C69;
+    opacity: 0.9;
+    min-height: 300px;
+    width: 800px;
+    margin-left: 15%;
+    border: 1px ridge black;
 }
-.eventList {
-    height: 100px;
-    margin: 10px;
+.container {
+    width: 500px;
+}
+button, input, .eventList {
+    background-color: #702632;
+    opacity: 0.9;
+    color: #E7E247;
+    border: 1px ridge black;
+}
+input {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.submit {
+    margin-left: 100px;
+    margin-top: 20px;
+    position: absolute;
 }
 li {
     list-style: none;
-    display: flex;
-    margin: 30px;
+    margin: 20px;
 }
-li p {
-    position: absolute;
-    right: 100px;
-    margin-top: 0;
+.eventList {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 750px;
 }
