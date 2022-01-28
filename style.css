@@ -10,8 +10,8 @@ main {
     filter: brightness(70%);
     opacity: 0.9;
     min-height: 300px;
-    width: 800px;
-    margin-left: 25%;
+    width: 1000px;
+    margin-left: 20%;
     border-radius: 1%;
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@ li {
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 750px;
+    width: 950px;
     display: flex;
     gap: 50px;
 }
