@@ -35,13 +35,19 @@ function addEvent() {
   }, 1000)
   var sectionEvents = document.createElement('section')
   section.appendChild(sectionEvents)
+  sectionEvents.setAttribute('class', 'eventList')
+
   let list = document.createElement('li')
   list.innerHTML = inputValue
+
   let p = document.createElement('p')
+  p.innerHTML = eventDate.value
+
   sectionEvents.appendChild(list)
-  list.appendChild(p)
+  sectionEvents.appendChild(p)
 
   let removeBtn = document.createElement('button')
+  removeBtn.setAttribute('class', 'remove')
   removeBtn.innerHTML = 'X'
   sectionEvents.appendChild(removeBtn)
   localStorage.setItem('events', JSON.stringify(events))
@@ -50,7 +56,6 @@ function addEvent() {
 const filteredArray = []
 
 for (const event of events) {
-
   var sectionEvents = document.createElement('div')
   section.appendChild(sectionEvents)
   sectionEvents.setAttribute('class', 'eventList')
@@ -99,5 +104,3 @@ for (const event of events) {
     }
   }, 1000)
 }
-
-
