@@ -3,6 +3,10 @@ body {
     background-color:#248232;
     background-image: url('https://i.pinimg.com/originals/86/74/c0/8674c01b6a1dc3f9cdd787de586fcc88.jpg');
     background-color: black;
+    display: flex;
+    display: flex;
+    display: flex;
+    display: flex;
 }
 main {
     display: flex;
@@ -65,16 +69,12 @@ li {
     width: 950px;
     height: 80px;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
-}
-p, li {
-    width: 400px;
-}
-.countdown {
-    width: 500px;
 }
 .remove {
     height: 20px;
-    margin: 20px;
-    margin-left: 250px;
+    margin-top: 20px;
+    position:absolute;
+    left: 800px;
 }
