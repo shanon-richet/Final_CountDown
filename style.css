@@ -45,4 +45,12 @@ li {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 750px;
+    display: flex;
+    gap: 50px;
+}
+.remove {
+    float: right;
+    height: 20px;
+    margin: 20px;
+    margin-left: 70px;
 }
