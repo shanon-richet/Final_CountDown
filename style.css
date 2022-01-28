@@ -4,6 +4,10 @@ body {
     background-image: url('https://i.pinimg.com/originals/86/74/c0/8674c01b6a1dc3f9cdd787de586fcc88.jpg');
     background-color: black;
 }
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
 .eventDate, .eventName, .eventTime, .submit {
     height: 30px;
 }
@@ -17,8 +21,8 @@ body {
     width: 65px;
 }
 .submit {
-    margin-top: 25px;
-    margin-left: 50px;
+    margin-top: 23px;
+    margin-left: 40px;
 }
 main {
     margin: 50px;
@@ -38,7 +42,7 @@ main, .eventList {
 .container {
     width: 850px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 button, input, .eventList, li {
     background-color: #51291E;
@@ -55,15 +59,21 @@ li {
 }
 .eventList {
     margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: -50px;
+    margin-bottom: 10px;
     width: 950px;
+    height: 80px;
     display: flex;
     gap: 50px;
 }
+p, li {
+    width: 400px;
+}
+.countdown {
+    width: 500px;
+}
 .remove {
-    float: right;
     height: 20px;
     margin: 20px;
-    margin-left: 70px;
+    margin-left: 250px;
 }
