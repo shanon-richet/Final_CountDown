@@ -7,6 +7,7 @@ Make program for add events and show the time left before that event
 
 - setInterval
 - localStorage
+- find
 
 
 ## 
