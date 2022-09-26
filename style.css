@@ -4,75 +4,65 @@ body {
     background-image: url('https://i.pinimg.com/originals/86/74/c0/8674c01b6a1dc3f9cdd787de586fcc88.jpg');
     background-size: cover;
     background-color: black;
-    display: flex;
+}
+main, .eventList {
+    margin-left: auto;
+    margin-right: auto;
 }
 main {
-    display: flex;
-    flex-wrap: wrap;
-}
-.eventDate, .eventName, .eventTime, .submit {
-    height: 30px;
-}
-.eventName {
-    width: 400px;
-}
-.eventDate {
-    width: 200px;
-}
-.eventTime {
-    width: 65px;
-}
-.submit {
-    margin-top: 23px;
-    margin-left: 40px;
-}
-main {
-    margin: 50px;
+    margin-top: 2%;
     background-color: #465C69;
-    filter: brightness(70%);
     opacity: 0.9;
-    min-height: 300px;
-    width: 1000px;
-    margin-left: 20%;
-    border-radius: 1%;
-    display: flex;
-    flex-wrap: wrap;
+    width: 90%;
 }
 main, .eventList {
     border: 1px ridge #A4BAB7;
 }
 .container {
-    width: 850px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-button, input, .eventList, li {
+.eventName {
+    width: 35%;
+}
+.eventDate {
+    width: 25%;
+}
+.eventTime {
+    width: 15%;
+}
+input, .eventList, .remove  {
     background-color: #51291E;
     color: #E7E247;
-    border-radius: 1%;
+}
+.eventList div, input {
+    font-size: 3em;
 }
 input {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-li {
-    list-style: none;
-    margin: 20px;
+    min-height: 60px;
+    max-height: 120px;
+    height: 10vh;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 .eventList {
-    margin-left: 20px;
-    margin-top: -50px;
-    margin-bottom: 10px;
-    width: 950px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    width: 97%;
+    margin-bottom: 1%;
+}
+.eventList div {
+    display: list-item;
+}
+.eventList div > * {
+    margin-left: 5%;
 }
 .remove {
-    height: 20px;
-    margin-top: 20px;
-    position:absolute;
-    left: 800px;
+    width: auto;
+    height: auto;
+    font-size: 1.5em;
+    float: right;
+    margin-top: -15%;
 }
+
