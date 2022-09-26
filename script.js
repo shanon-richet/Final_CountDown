@@ -61,8 +61,6 @@ function addEvent() {
     "date": eventDate.value,
     "time": eventTime.value
   }
-  // stored.push(Object(arr))
-
   if (typeof(stored) === 'object') {
     newStore.push(stored)
     newStore.push(arr)
