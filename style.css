@@ -39,7 +39,7 @@ input, .eventList, .remove  {
 .eventList div, input {
     font-size: 3em;
 }
-input {
+input, .submit {
     min-height: 60px;
     max-height: 120px;
     height: 10vh;
@@ -65,5 +65,9 @@ input {
     float: right;
     margin-top: -15%;
     margin-right: 1%;
+}
+.submit {
+    width: 10%;
+    font-size: 3em;
 }
 
